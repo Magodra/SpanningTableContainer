@@ -33,7 +33,7 @@ class_name SpanningTableContainer extends Container
 @export_range(0,1024) var theme_h_separation = 5
 ## [color=Yellow]Note! This should have been an Theam override, but that is currently
 ## not supported to create from GDscript. So for now we use an ordinary property.[/color][br]
-## This "theme override" represents the spacing between coloumns.
+## This "theme override" represents the spacing"res://README.md" between coloumns.
 ## @experimental
 @export_range(0,1024) var theme_v_separation = 5
 @export_group("")
