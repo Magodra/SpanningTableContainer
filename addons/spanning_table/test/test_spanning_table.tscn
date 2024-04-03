@@ -1,0 +1,328 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjsf7britforc"]
+
+[ext_resource type="Script" path="res://addons/spanning_table/spanning_table_container.gd" id="1_y3svu"]
+[ext_resource type="Script" path="res://addons/spanning_table/spanning_cell_container.gd" id="2_1j5df"]
+
+[node name="TestSpanningTable" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SpanningTableContainer1" type="Container" parent="."]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 57.0
+offset_right = 456.0
+offset_bottom = 196.0
+script = ExtResource("1_y3svu")
+columns = 3
+
+[node name="SpanningCellContainer1" type="Container" parent="SpanningTableContainer1"]
+layout_mode = 2
+script = ExtResource("2_1j5df")
+col_span = 2
+
+[node name="Grid Cell 1" type="Button" parent="SpanningTableContainer1/SpanningCellContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Grid Cell 1"
+
+[node name="Grid Cell 2" type="Button" parent="SpanningTableContainer1"]
+layout_mode = 2
+text = "Grid Cell 2"
+
+[node name="Grid Cell 3" type="Button" parent="SpanningTableContainer1"]
+layout_mode = 2
+text = "Grid Cell 3"
+
+[node name="Grid Cell 4" type="Button" parent="SpanningTableContainer1"]
+layout_mode = 2
+text = "Grid Cell 4"
+
+[node name="Grid Cell 5" type="Button" parent="SpanningTableContainer1"]
+layout_mode = 2
+text = "Grid Cell 5"
+
+[node name="Grid Cell 6" type="Button" parent="SpanningTableContainer1"]
+layout_mode = 2
+text = "Grid Cell 6"
+
+[node name="SpanningCellContainer2" type="Container" parent="SpanningTableContainer1"]
+layout_mode = 2
+script = ExtResource("2_1j5df")
+row_span = 2
+
+[node name="Grid Cell 7" type="Button" parent="SpanningTableContainer1/SpanningCellContainer2"]
+layout_mode = 2
+text = "Grid Cell 7"
+
+[node name="Grid Cell 8" type="Button" parent="SpanningTableContainer1"]
+layout_mode = 2
+text = "Grid Cell 8"
+
+[node name="Grid Cell 9" type="Button" parent="SpanningTableContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Grid Cell 9"
+
+[node name="Grid Cell 10" type="Button" parent="SpanningTableContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Grid Cell 10"
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 671.0
+offset_top = 50.0
+offset_right = 1085.0
+offset_bottom = 190.0
+theme_override_constants/h_separation = 4
+theme_override_constants/v_separation = 4
+columns = 3
+
+[node name="Grid Cell 1" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "Grid Cell 1"
+
+[node name="Grid Cell 2" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "Grid Cell 2"
+
+[node name="Grid Cell 3" type="Button" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Grid Cell 3"
+
+[node name="Grid Cell 4" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "Grid Cell 4"
+
+[node name="Grid Cell 5" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "Grid Cell 5"
+
+[node name="Grid Cell 6" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "Grid Cell 6"
+
+[node name="Grid Cell 7" type="Button" parent="GridContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Grid Cell 7"
+
+[node name="Grid Cell 8" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "Grid Cell 8"
+
+[node name="Grid Cell 9" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "Grid Cell 9"
+
+[node name="SpanningTableContainer2" type="Container" parent="."]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 286.0
+offset_right = 454.0
+offset_bottom = 389.0
+script = ExtResource("1_y3svu")
+columns = 3
+
+[node name="SpanningCellContainer3" type="Container" parent="SpanningTableContainer2"]
+layout_mode = 2
+script = ExtResource("2_1j5df")
+col_span = 2
+
+[node name="Grid Cell 1" type="Button" parent="SpanningTableContainer2/SpanningCellContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Grid Cell 1"
+
+[node name="Grid Cell 2" type="Button" parent="SpanningTableContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Grid Cell 2"
+
+[node name="Grid Cell 3" type="Button" parent="SpanningTableContainer2"]
+layout_mode = 2
+text = "Grid Cell 3"
+
+[node name="SpanningCellContainer4" type="Container" parent="SpanningTableContainer2"]
+layout_mode = 2
+script = ExtResource("2_1j5df")
+col_span = 2
+row_span = 2
+
+[node name="Grid Cell 4" type="Button" parent="SpanningTableContainer2/SpanningCellContainer4"]
+layout_mode = 2
+text = "Grid Cell 4"
+
+[node name="Grid Cell 5" type="Button" parent="SpanningTableContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Grid Cell 5"
+
+[node name="SpanningTableContainer3" type="Container" parent="."]
+layout_mode = 0
+offset_left = 756.0
+offset_top = 291.0
+offset_right = 984.0
+offset_bottom = 379.0
+script = ExtResource("1_y3svu")
+columns = 3
+
+[node name="SpanningCellContainer5" type="Container" parent="SpanningTableContainer3"]
+layout_mode = 2
+script = ExtResource("2_1j5df")
+col_span = 2
+
+[node name="Button" type="Button" parent="SpanningTableContainer3/SpanningCellContainer5"]
+layout_mode = 2
+text = "Grid Cell 1"
+
+[node name="SpanningCellContainer6" type="Container" parent="SpanningTableContainer3"]
+layout_mode = 2
+script = ExtResource("2_1j5df")
+row_span = 2
+
+[node name="Button" type="Button" parent="SpanningTableContainer3/SpanningCellContainer6"]
+layout_mode = 2
+text = "Grid Cell 2"
+
+[node name="SpanningCellContainer7" type="Container" parent="SpanningTableContainer3"]
+layout_mode = 2
+script = ExtResource("2_1j5df")
+row_span = 2
+
+[node name="Button" type="Button" parent="SpanningTableContainer3/SpanningCellContainer7"]
+layout_mode = 2
+text = "Grid Cell 3"
+
+[node name="SpanningCellContainer8" type="Container" parent="SpanningTableContainer3"]
+layout_mode = 2
+script = ExtResource("2_1j5df")
+col_span = 2
+
+[node name="Button" type="Button" parent="SpanningTableContainer3/SpanningCellContainer8"]
+layout_mode = 2
+text = "Grid Cell 4"
+
+[node name="SpanningTableContainer4" type="Container" parent="."]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 503.0
+offset_right = 371.0
+offset_bottom = 570.0
+script = ExtResource("1_y3svu")
+columns = 2
+
+[node name="SpanningCellContainer9" type="Container" parent="SpanningTableContainer4"]
+layout_mode = 2
+script = ExtResource("2_1j5df")
+col_span = 2
+
+[node name="Button" type="Button" parent="SpanningTableContainer4/SpanningCellContainer9"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Grid Cell 1"
+
+[node name="Button2" type="Button" parent="SpanningTableContainer4"]
+layout_mode = 2
+text = "Grid Cell 2"
+
+[node name="Button3" type="Button" parent="SpanningTableContainer4"]
+layout_mode = 2
+text = "Grid Cell 3"
+
+[node name="SpanningTableContainer5" type="Container" parent="."]
+layout_mode = 0
+offset_left = 686.0
+offset_top = 536.0
+offset_right = 866.0
+offset_bottom = 567.0
+script = ExtResource("1_y3svu")
+
+[node name="SpanningCellContainer10" type="Container" parent="SpanningTableContainer5"]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("2_1j5df")
+col_span = 2
+
+[node name="Button" type="Button" parent="SpanningTableContainer5/SpanningCellContainer10"]
+layout_mode = 2
+text = "Grid Cell 1"
+
+[node name="SpanningCellContainer11" type="Container" parent="."]
+layout_mode = 0
+offset_left = 897.0
+offset_top = 534.0
+offset_right = 1026.0
+offset_bottom = 565.0
+script = ExtResource("2_1j5df")
+
+[node name="Button" type="Button" parent="SpanningCellContainer11"]
+layout_mode = 2
+text = "Grid Cell 1"
+
+[node name="Labels" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="Label1" type="Label" parent="Labels"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "SpanningTableContainer1
+Two spanning cells."
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Labels"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Reference GridContainer"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Labels"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "SpanningTableContainer2
+Both column and row span"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Labels"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "SpanningTableContainer3
+Layout with hole"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Labels"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "SpanningTableContainer4
+Row span
+"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Labels"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "SpanningTableContainer5 and SpanningCellContainer11
+Warnings"
+horizontal_alignment = 1
