@@ -16,6 +16,7 @@ class_name SpanningCellContainer extends Container
 		var parent = get_parent()
 		if parent:
 			parent.queue_sort()
+			parent.update_minimum_size()
 		update_configuration_warnings()
 
 
@@ -26,6 +27,7 @@ class_name SpanningCellContainer extends Container
 		var parent = get_parent()
 		if parent:
 			parent.queue_sort()
+			parent.update_minimum_size()
 
 
 # Check the cell configuration to give user feedback about most common errors.
