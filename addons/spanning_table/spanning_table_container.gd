@@ -81,7 +81,6 @@ func _calculate_layout( col_minw : Dictionary, row_minh : Dictionary,  col_expan
 		
 		# Check if cell is occupied, and find next free
 		while _occupied(occupied,valid_controls_index, col_span, row_span):
-			# TODO : Check all cells spanned by the control... This code only check the first cell :(
 			valid_controls_index += 1
 		
 		var row : int = valid_controls_index / columns
@@ -128,10 +127,15 @@ func _calculate_layout( col_minw : Dictionary, row_minh : Dictionary,  col_expan
 	# Consider all empty columns expanded.
 	while valid_controls_index < columns:
 		col_expanded[valid_controls_index] = true
+		col_minw[valid_controls_index] = 0
 		valid_controls_index += 1
 	
+	# Check if there are no, rows, define min height.
+	if row_minh.size() == 0:
+		row_minh[0] = 0
+	
 	layout["max_col"] = mini(valid_controls_index, columns)
-	layout["max_row"] = ceili(float(valid_controls_index) / float(columns))
+	layout["max_row"] = row_minh.size()
 	
 	# Debug prints used during debug of the calculate_layout function.
 	#print("occupied", occupied)
@@ -140,6 +144,7 @@ func _calculate_layout( col_minw : Dictionary, row_minh : Dictionary,  col_expan
 	#print("col_expanded: ", col_expanded)
 	#print("row_expanded: ", row_expanded)
 	#print("layout", layout)
+	#print("child_array", child_array)
 
 
 # Perform the shorting of the children of this control
