@@ -23,6 +23,7 @@ class_name SpanningTableContainer extends Container
 		columns = new_columns
 		
 		queue_sort()
+		update_minimum_size()
 
 # @TODO Fix this with some real theam override consants. Since this isn't supported by GDScript per 4.2.1 use som exports to simulate...
 @export_group("Theme Override Constants","theme_")
