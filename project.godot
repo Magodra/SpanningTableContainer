@@ -12,7 +12,7 @@ config_version=5
 
 config/name="SpanningTableContainer"
 run/main_scene="res://addons/spanning_table/test/test_spanning_table.tscn"
-config/features=PackedStringArray("4.2", "Forward Plus")
+config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [dotnet]
