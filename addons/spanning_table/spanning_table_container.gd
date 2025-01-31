@@ -187,8 +187,7 @@ func _handle_sort_children():
 	while !can_fit && col_expanded.size() > 0:
 		# Check if all minwidth constraints are OK if we use the remaining space.
 		can_fit = true
-		var max_index : int = col_expanded.keys().front()#->get()
-		#for (const int &E : col_expanded) {
+		var max_index : int = col_expanded.keys().front()
 		for E in col_expanded:
 			if col_minw[E] > col_minw[max_index]:
 				max_index = E
@@ -293,7 +292,7 @@ func _handle_sort_children():
 				cw += col_width[col+n]
 		for n in range(row_span):
 			rh += row_height[row+n]
-		var s = Vector2i(cw + theme_v_separation*(col_span-1), rh + theme_h_separation*(row_span-1) )
+		var s = Vector2i(cw + theme_h_separation*(col_span-1), rh + theme_v_separation*(row_span-1) )
 		fit_child_in_rect(child_entry.child, Rect2(p, s))
 
 
