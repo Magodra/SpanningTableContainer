@@ -262,7 +262,7 @@ func _handle_sort_children():
 		row_pos[row] = curr_row_pos
 		if row_expanded.has(row):
 			row_height[row] = row_expand
-			if col_remaining_pixel > 0:
+			if row_remaining_pixel > 0:
 				row_remaining_pixel -= 1
 				row_height[row] += 1
 		else:
@@ -324,4 +324,3 @@ func _get_minimum_size() -> Vector2:
 		min_size.y += h
 	
 	return min_size
-
