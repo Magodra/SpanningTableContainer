@@ -27,16 +27,34 @@ class_name SpanningTableContainer extends Container
 
 # @TODO Fix this with some real theam override consants. Since this isn't supported by GDScript per 4.2.1 use som exports to simulate...
 @export_group("Theme Override Constants","theme_")
-## [color=Yellow]Note! This should have been an Theam override, but that is currently
+## [color=Yellow]Note! This should have been an Theme override, but that is currently
 ## not supported to create from GDscript. So for now we use an ordinary property.[/color][br]
 ## This "theme override" represents the spacing between rows.
 ## @experimental
-@export_range(0,1024) var theme_h_separation = 5
-## [color=Yellow]Note! This should have been an Theam override, but that is currently
+@export_range(0, 1024) var theme_h_separation: int = 5:
+	set(value):
+		if theme_h_separation == value:
+			return
+			
+		theme_h_separation = value
+		
+		queue_sort()
+		update_minimum_size()
+
+## [color=Yellow]Note! This should have been an Theme override, but that is currently
 ## not supported to create from GDscript. So for now we use an ordinary property.[/color][br]
-## This "theme override" represents the spacing"res://README.md" between coloumns.
+## This "theme override" represents the spacing between coloumns.
 ## @experimental
-@export_range(0,1024) var theme_v_separation = 5
+@export_range(0,1024) var theme_v_separation = 5:
+	set(value):
+		if theme_v_separation == value:
+			return
+		
+		theme_v_separation = value
+		
+		queue_sort()
+		update_minimum_size()
+
 @export_group("")
 
 
